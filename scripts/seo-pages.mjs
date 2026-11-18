@@ -84,6 +84,8 @@ function page({ slug, title, desc, body, headline, tab }) {
     .replace(/(<meta property="og:title" content=")[^"]*/, `$1${esc(title)}`)
     .replace(/(<meta property="og:description" content=")[^"]*/, `$1${esc(desc)}`)
   if (headline) html = html.replace('<html lang="en">', `<html lang="en" data-headline="${esc(headline)}"${tab ? ` data-tab="${tab}"` : ''}>`)
+  // AdSense site verification (no ads load from this; the Ad component does that once a slot is set).
+  if (process.env.VITE_ADSENSE_CLIENT) html = html.replace('</head>', `<meta name="google-adsense-account" content="${esc(process.env.VITE_ADSENSE_CLIENT)}" />\n</head>`)
   if (url) html = html.replace('</head>', `<link rel="canonical" href="${url}" /><meta property="og:url" content="${url}" />\n</head>`)
   return html.replace('</head>', `${STYLE}\n</head>`).replace('</body>', `<main class="seo">${body}</main>\n</body>`)
 }
