@@ -1,0 +1,188 @@
+<title>Morph Brand Guide</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600&display=swap">
+<style>
+/* Layout: single-column brand guide. Sections: sting, logo, clear space and don'ts, colour, type, icon set, Morphy, voice. */
+:root {
+  color-scheme: dark;
+  --bg: #000;
+  --sheet: #0a0a0c;
+  --panel: #141418;
+  --line: rgba(255, 255, 255, 0.08);
+  --fg: #fff;
+  --fg-2: #a1a1a1;
+  --violet: #7c5cff;
+  --cyan: #3de1ff;
+  --grad: linear-gradient(135deg, var(--violet), var(--cyan));
+  --ui: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --brand: 'Outfit', var(--ui);
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font: 15px/1.55 var(--ui);
+  margin: 0;
+  padding-block: 32px 72px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.wrap { max-width: 920px; margin: 0 auto; display: grid; gap: 22px; }
+h1 { font: 600 clamp(28px, 6vw, 44px)/1.1 var(--brand); letter-spacing: -0.03em; margin: 0; }
+h1 i, .word i { font-style: normal; color: var(--cyan); }
+h2 { font: 600 20px/1.2 var(--ui); margin: 0 0 4px; }
+.lead { color: var(--fg-2); margin: 8px 0 0; max-width: 62ch; }
+section { background: var(--sheet); border: 1px solid var(--line); border-radius: 24px; padding: 22px; display: grid; gap: 14px; min-width: 0; }
+section > p { color: var(--fg-2); margin: 0; max-width: 64ch; }
+.row { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+.card { background: var(--panel); border-radius: 16px; padding: 16px; display: grid; gap: 8px; align-content: start; min-width: 0; }
+.cap { font-size: 12px; color: var(--fg-2); }
+.cap b { color: var(--fg); font-weight: 600; }
+.word { font: 600 40px/1 var(--brand); letter-spacing: -0.03em; }
+.lockup { display: flex; align-items: center; gap: 12px; }
+.lightbg { background: #f4f4f6; color: #0b0b0e; }
+.lightbg .word i { color: var(--violet); }
+.dont { position: relative; justify-items: center; text-align: center; min-height: 110px; }
+.dont::after { content: ''; position: absolute; inset: 10px; border-radius: 12px; background: linear-gradient(to top right, transparent calc(50% - 1px), #ff6b6b 50%, transparent calc(50% + 1px)); opacity: .7; pointer-events: none; }
+.sw { height: 72px; border-radius: 12px; }
+.mono { font: 500 12px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--fg-2); overflow-wrap: anywhere; }
+.icons { display: flex; gap: 14px; flex-wrap: wrap; align-items: end; }
+.icons figure { margin: 0; display: grid; justify-items: center; gap: 6px; font-size: 11px; color: var(--fg-2); }
+.icons img { display: block; border-radius: 22.5%; }
+.moods { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.moods .card { justify-items: center; text-align: center; }
+.moods svg { width: 100%; max-width: 100px; overflow: visible; }
+.stage { background: #000; border-radius: 18px; height: 260px; display: grid; place-items: center; position: relative; overflow: hidden; border: 1px solid var(--line); }
+.stage svg { width: 120px; height: 120px; position: absolute; top: 50px; }
+.stage .word { position: absolute; bottom: 38px; opacity: 0; }
+.stage button { position: absolute; right: 12px; top: 12px; font: 500 13px var(--ui); color: var(--fg); background: var(--panel); border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; cursor: pointer; }
+.play .sq { animation: sq 1.6s cubic-bezier(.65,0,.35,1) forwards; transform-box: fill-box; transform-origin: center; }
+@keyframes sq { 0% { rx: 4px; transform: scale(.3) rotate(-90deg); opacity: 0; } 25% { opacity: 1; } 70% { rx: 4px; transform: scale(1) rotate(0); } 100% { rx: 30px; transform: scale(1); } }
+.play .face { animation: pop .5s 1.5s cubic-bezier(.3,1.6,.5,1) both; transform-box: fill-box; transform-origin: center; }
+@keyframes pop { from { transform: scale(0); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+.play .word { animation: rise .6s 1.9s cubic-bezier(.22,1,.36,1) forwards; }
+@keyframes rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+.face { opacity: 0; }
+ul { margin: 0; padding-left: 18px; color: var(--fg-2); }
+li + li { margin-top: 4px; }
+li b { color: var(--fg); font-weight: 600; }
+@media (max-width: 600px) { .moods { grid-template-columns: repeat(2, 1fr); } section { padding: 16px; } }
+@media (prefers-reduced-motion: reduce) {
+  .play .sq, .play .face, .play .word { animation: none; }
+  .face, .stage .word { opacity: 1; }
+  .sq { rx: 30px; }
+}
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>morph<i>.</i> brand guide</h1>
+    <p class="lead">Final direction: Aurora Merge, logo B. One sharp corner turning soft: a file becoming whatever you need. Violet and cyan light, black everywhere else.</p>
+  </header>
+
+  <section>
+    <h2>Intro sting</h2>
+    <p>Plays once on first launch and in social clips. A sharp square spins in, softens, Morphy wakes up, the name lands. 2.5 seconds.</p>
+    <div class="stage" id="stage">
+      <svg viewBox="0 0 100 100" aria-hidden="true">
+        <defs><linearGradient id="sg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7C5CFF"/><stop offset="1" stop-color="#3DE1FF"/></linearGradient></defs>
+        <rect class="sq" x="14" y="14" width="72" height="72" rx="4" fill="url(#sg)"/>
+        <g class="face"><ellipse cx="40" cy="30" rx="18" ry="6" fill="#fff" opacity=".28"/><ellipse cx="38" cy="52" rx="4.5" ry="6.5" fill="#fff"/><ellipse cx="62" cy="52" rx="4.5" ry="6.5" fill="#fff"/></g>
+      </svg>
+      <span class="word">morph<i>.</i></span>
+      <button type="button" id="replay">Replay</button>
+    </div>
+  </section>
+
+  <section>
+    <h2>Logo</h2>
+    <div class="row">
+      <div class="card"><div class="lockup"><span class="m" data-size="48"></span><span class="word">morph<i>.</i></span></div><span class="cap"><b>Primary.</b> White text, cyan dot, on black.</span></div>
+      <div class="card lightbg"><div class="lockup"><span class="m" data-size="48"></span><span class="word">morph<i>.</i></span></div><span class="cap" style="color:#555"><b style="color:#0b0b0e">On light.</b> Near-black text, violet dot.</span></div>
+      <div class="card"><span class="m" data-size="64"></span><span class="cap"><b>Mark alone.</b> App icon, favicon, avatars. Smallest size 16&nbsp;px.</span></div>
+    </div>
+    <p>Clear space: keep empty space around the logo at least as wide as the dot. Wordmark is Outfit SemiBold, tracking −3%, always lowercase, always with the dot.</p>
+    <div class="row">
+      <div class="card dont"><span class="m" data-size="56" data-variant="stretch"></span><span class="cap">Don't stretch it</span></div>
+      <div class="card dont"><span class="m" data-size="56" data-variant="rotate"></span><span class="cap">Don't rotate it (the sharp corner is always top left)</span></div>
+      <div class="card dont"><span class="m" data-size="56" data-variant="recolor"></span><span class="cap">Don't recolour it</span></div>
+      <div class="card dont"><span class="word" style="font-size:30px">Morph</span><span class="cap">Don't capitalise or drop the dot</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Colour</h2>
+    <div class="row">
+      <div class="card"><div class="sw" style="background:#7c5cff"></div><b>Violet</b><span class="mono">#7C5CFF · accent<br>Buttons, focus rings, links. White text passes on it (4.8:1).</span></div>
+      <div class="card"><div class="sw" style="background:#3de1ff"></div><b>Cyan</b><span class="mono">#3DE1FF · accent-2<br>Gradients, the dot, highlights. Never behind white text.</span></div>
+      <div class="card"><div class="sw" style="background:var(--grad)"></div><b>Aurora</b><span class="mono">135°, violet → cyan<br>Logo, Morphy, glow. Not for buttons with text.</span></div>
+      <div class="card"><div class="sw" style="background:#000;border:1px solid var(--line)"></div><b>Black</b><span class="mono">#000 · bg<br>Surfaces step up: #0A0A0A, #141414, #1E1E1E.</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Type</h2>
+    <div class="row">
+      <div class="card"><span style="font:600 32px/1 var(--brand);letter-spacing:-.03em">Outfit</span><span class="cap"><b>Brand only:</b> wordmark, store screenshots, social.</span></div>
+      <div class="card"><span style="font:600 32px/1 var(--ui);letter-spacing:-.02em">Inter</span><span class="cap"><b>Everything in the app.</b> 600 for titles, 400 for body, tabular numbers for sizes and times.</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>App icons</h2>
+    <p>Full-bleed squares; iOS and Android round the corners. Files in <span class="mono">design/brand/final/</span>, re-export with <span class="mono">node scripts/export-icons.mjs</span>.</p>
+    <div class="icons">
+      <figure><img src="icon-dark.svg" width="96" height="96" alt="Dark app icon">Dark</figure>
+      <figure><img src="icon-light.svg" width="96" height="96" alt="Light app icon">Light</figure>
+      <figure><img src="icon-tinted.svg" width="96" height="96" alt="Tinted app icon">Tinted</figure>
+      <figure><img src="icon-dark.svg" width="48" height="48" alt="">48</figure>
+      <figure><img src="icon-dark.svg" width="29" height="29" alt="">29</figure>
+      <figure><img src="morph-mark.svg" width="16" height="16" alt="" style="border-radius:0">16</figure>
+    </div>
+  </section>
+
+  <section>
+    <h2>Morphy</h2>
+    <p>The mascot is a drop of aurora light. Morphy reacts, never talks, and never covers a button. In the app now: idle on Home, catching while a file is dragged over, a happy hop when it's done, a wobble on errors.</p>
+    <div class="moods" id="moods"></div>
+  </section>
+
+  <section>
+    <h2>Voice</h2>
+    <ul>
+      <li><b>Short and warm.</b> "Drop anything", not "Upload your media files".</li>
+      <li><b>Errors say what to do.</b> "That file has no sound. Try a video with audio in it."</li>
+      <li><b>Private by default, say it plainly.</b> "Files never leave your device."</li>
+      <li><b>Lowercase brand name.</b> Write "morph" in text, "morph." in the logo.</li>
+    </ul>
+  </section>
+</div>
+
+<script>
+const B = 'M18 14 H58 A28 28 0 0 1 86 42 V58 A28 28 0 0 1 58 86 H42 A28 28 0 0 1 14 58 V18 A4 4 0 0 1 18 14Z'
+let n = 0
+function mark(size, variant) {
+  const g = 'g' + ++n
+  const fill = variant === 'recolor' ? '#ff9f1c' : `url(#${g})`
+  const tf = variant === 'stretch' ? ' transform="translate(50 50) scale(1.35 .7) translate(-50 -50)"' : variant === 'rotate' ? ' transform="rotate(90 50 50)"' : ''
+  return `<svg viewBox="12 12 76 76" width="${size}" height="${size}" aria-hidden="true"><defs><linearGradient id="${g}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7C5CFF"/><stop offset="1" stop-color="#3DE1FF"/></linearGradient></defs>
+    <g${tf}><path d="${B}" fill="${fill}"/><path d="${B}" fill="#fff" opacity=".22" transform="translate(50 30) scale(.7 .3) translate(-50 -30)"/></g></svg>`
+}
+document.querySelectorAll('.m').forEach((el) => (el.outerHTML = mark(el.dataset.size, el.dataset.variant)))
+
+// Same shapes as src/design/Morphy.tsx.
+const ROUND = 'M50 16 C74 16 89 33 88 55 C87 77 71 88 50 88 C29 88 13 77 12 55 C11 33 26 16 50 16Z'
+const MOODS = [
+  ['Idle', ROUND, '<ellipse cx="38" cy="50" rx="4.5" ry="6.5" fill="#fff"/><ellipse cx="62" cy="50" rx="4.5" ry="6.5" fill="#fff"/>', 'Home, waiting'],
+  ['Catching', 'M50 22 C78 18 93 36 91 58 C89 79 72 88 50 88 C28 88 11 79 9 58 C7 36 22 18 50 22Z', '<circle cx="38" cy="50" r="7" fill="#fff"/><circle cx="62" cy="50" r="7" fill="#fff"/><ellipse cx="50" cy="68" rx="5" ry="6" fill="#fff"/>', 'File dragged over'],
+  ['Done', ROUND, '<path d="M32 52 Q38 44 44 52 M56 52 Q62 44 68 52" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/><path d="M42 66 Q50 74 58 66" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>', 'Conversion finished'],
+  ['Oops', 'M50 24 C74 24 90 40 89 60 C88 80 72 88 50 88 C28 88 12 80 11 60 C10 40 26 24 50 24Z', '<path d="M33 50 H43 M57 50 H67" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/><path d="M41 69 Q45.5 64 50 69 Q54.5 74 59 69" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>', 'Something broke'],
+]
+document.getElementById('moods').innerHTML = MOODS.map(([t, d, f, when], i) => `<div class="card"><svg viewBox="0 0 100 100" aria-hidden="true"><defs><linearGradient id="mg${i}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7C5CFF"/><stop offset="1" stop-color="#3DE1FF"/></linearGradient></defs><path d="${d}" fill="url(#mg${i})"/><ellipse cx="40" cy="${t === 'Oops' ? 36 : 29}" rx="18" ry="6.5" fill="#fff" opacity=".28"/>${f}</svg><b>${t}</b><span class="cap">${when}</span></div>`).join('')
+
+const stage = document.getElementById('stage')
+const play = () => { stage.classList.remove('play'); void stage.offsetWidth; stage.classList.add('play') }
+document.getElementById('replay').addEventListener('click', play)
+play()
+</script>

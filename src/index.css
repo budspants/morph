@@ -1,0 +1,37 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/inter';
+
+@import './design/tokens.css';
+
+/* Personal modules bring their own utilities,
+   so none of their class names end up in the public stylesheet. */
+@source not './modules';
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text-1);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Timecodes, sizes, percentages never jitter. */
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Switching tabs: a short fade and rise. `hidden` panels restart the animation when shown again. */
+@keyframes tab-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+main {
+  animation: tab-in 0.24s cubic-bezier(0.22, 1, 0.36, 1);
+}
+@media (prefers-reduced-motion: reduce) {
+  main {
+    animation: none;
+  }
+}

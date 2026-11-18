@@ -1,0 +1,250 @@
+<title>Morph Brand Round 1</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600&family=Unbounded:wght@700&family=Pixelify+Sans:wght@600&family=Syne:wght@700&family=Outfit:wght@600&display=swap">
+<style>
+/* Layout: one dark gallery, five full-width concept sheets stacked, each a mini brand board. */
+:root {
+  color-scheme: dark;
+  --bg: #050506;
+  --sheet: #0d0d10;
+  --sheet-2: #15151a;
+  --line: rgba(255, 255, 255, 0.08);
+  --fg: #f4f4f6;
+  --fg-2: #a3a3ad;
+  --fg-3: #8a8a95;
+  --pick: #7c5cff;
+  --ui: 'Inter', ui-sans-serif, system-ui, sans-serif;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--ui);
+  font-size: 15px;
+  line-height: 1.5;
+  padding-block: 32px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.wrap { max-width: 980px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px; }
+header h1 { font-size: clamp(26px, 5vw, 40px); font-weight: 600; letter-spacing: -0.02em; margin: 0; text-wrap: balance; }
+header p { color: var(--fg-2); margin: 8px 0 0; max-width: 62ch; }
+.rec { border: 1px solid color-mix(in srgb, var(--pick) 45%, transparent); background: color-mix(in srgb, var(--pick) 8%, var(--sheet)); border-radius: 20px; padding: 18px 20px; }
+.rec b { color: #fff; }
+.rec p { margin: 6px 0 0; color: var(--fg-2); }
+.sheet { background: var(--sheet); border: 1px solid var(--line); border-radius: 28px; padding: 24px; display: grid; gap: 22px; }
+.top { display: flex; gap: 16px; align-items: baseline; flex-wrap: wrap; justify-content: space-between; }
+.num { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--fg-3); }
+.name { font-size: 22px; font-weight: 600; margin: 2px 0 0; }
+.idea { color: var(--fg-2); margin: 4px 0 0; max-width: 60ch; }
+.swatch { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; color: var(--fg-2); font-variant-numeric: tabular-nums; }
+.swatch i { width: 14px; height: 14px; border-radius: 50%; display: inline-block; }
+.board { display: grid; grid-template-columns: 1.1fr 1fr; gap: 16px; }
+.panel { background: var(--sheet-2); border-radius: 20px; padding: 20px; min-width: 0; }
+.label { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--fg-3); margin-bottom: 14px; }
+.lockup { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.lockup svg.mark { width: 88px; height: 88px; flex: none; }
+.word { font-size: 46px; line-height: 1; letter-spacing: -0.02em; }
+.sizes { display: flex; align-items: center; gap: 18px; margin-top: 18px; flex-wrap: wrap; }
+.sizes .chip { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--fg-3); }
+.icon { width: 64px; height: 64px; border-radius: 15px; background: #000; display: grid; place-items: center; box-shadow: inset 0 0 0 1px var(--line); }
+.icon svg { width: 44px; height: 44px; }
+.light { background: #f2f2f4; border-radius: 10px; padding: 6px; display: grid; place-items: center; }
+.moods { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.mood { display: grid; justify-items: center; gap: 6px; font-size: 12px; color: var(--fg-3); text-align: center; }
+.mood svg { width: 100%; max-width: 120px; height: auto; aspect-ratio: 1; }
+.breathe { animation: breathe 3.2s ease-in-out infinite; transform-origin: 50% 90%; transform-box: fill-box; }
+@keyframes breathe { 0%, 100% { transform: scale(1, 1); } 50% { transform: scale(1.03, 0.97) translateY(1px); } }
+.bounce { animation: bounce 1.6s cubic-bezier(.3,1.6,.5,1) infinite; transform-box: fill-box; transform-origin: 50% 100%; }
+@keyframes bounce { 0%, 60%, 100% { transform: translateY(0); } 30% { transform: translateY(-6px); } }
+.why { color: var(--fg-2); font-size: 14px; margin: 0; }
+.why b { color: var(--fg); font-weight: 600; }
+footer { color: var(--fg-3); font-size: 13px; text-align: center; }
+@media (max-width: 720px) { .board { grid-template-columns: 1fr; } .word { font-size: 38px; } .sheet { padding: 18px; } }
+@media (prefers-reduced-motion: reduce) { .breathe, .bounce { animation: none; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>morph — brand round 1</h1>
+    <p>Five different directions for the logo and Morphy. Each shows the mark, the wordmark, the app icon, a 16&nbsp;px test, and Morphy idle, catching a file, and celebrating. Pick your top 2 and I'll refine them in round 2.</p>
+  </header>
+  <div class="rec">
+    <b>My pick: 1 · Liquid Glass, with 5 · Aurora Merge as the alternate.</b>
+    <p>Liquid Glass looks premium in the App Store grid, matches the black and violet app, and Morphy stays cute without looking childish, which is what gets screenshotted and shared. Aurora is the most eye-catching in a TikTok feed, so its colours could become a Pro skin.</p>
+  </div>
+  <div id="sheets" class="wrap" style="gap:28px"></div>
+  <footer>Round 1 of 3 · Next: you pick 2, I refine them, then polish the winner into the SVG logo, icon set, animated sting and brand guide.</footer>
+</div>
+
+<script>
+let uid = 0
+const id = (p) => `${p}${++uid}`
+
+// Shared Morphy face: eyes and mouth per mood.
+function face(mood, ex1, ex2, ey, ink, mouthY) {
+  const mx = (ex1 + ex2) / 2
+  if (mood === 'happy')
+    return `<path d="M${ex1 - 6} ${ey + 2} Q${ex1} ${ey - 6} ${ex1 + 6} ${ey + 2}" fill="none" stroke="${ink}" stroke-width="4" stroke-linecap="round"/>
+            <path d="M${ex2 - 6} ${ey + 2} Q${ex2} ${ey - 6} ${ex2 + 6} ${ey + 2}" fill="none" stroke="${ink}" stroke-width="4" stroke-linecap="round"/>
+            <path d="M${mx - 7} ${mouthY} Q${mx} ${mouthY + 7} ${mx + 7} ${mouthY}" fill="none" stroke="${ink}" stroke-width="3.5" stroke-linecap="round"/>`
+  if (mood === 'catch')
+    return `<circle cx="${ex1}" cy="${ey}" r="7" fill="${ink}"/><circle cx="${ex2}" cy="${ey}" r="7" fill="${ink}"/>
+            <circle cx="${ex1 + 2}" cy="${ey - 2}" r="2.2" fill="#000" opacity=".55"/><circle cx="${ex2 + 2}" cy="${ey - 2}" r="2.2" fill="#000" opacity=".55"/>
+            <ellipse cx="${mx}" cy="${mouthY + 2}" rx="5" ry="6" fill="${ink}" opacity=".9"/>`
+  return `<ellipse cx="${ex1}" cy="${ey}" rx="4.5" ry="6.5" fill="${ink}"/><ellipse cx="${ex2}" cy="${ey}" rx="4.5" ry="6.5" fill="${ink}"/>`
+}
+const sparkle = (x, y, c) => `<path d="M${x} ${y - 8} L${x + 2} ${y - 2} L${x + 8} ${y} L${x + 2} ${y + 2} L${x} ${y + 8} L${x - 2} ${y + 2} L${x - 8} ${y} L${x - 2} ${y - 2}Z" fill="${c}"/>`
+const fileCard = (c) => `<g transform="translate(70 4) rotate(14)"><rect width="22" height="28" rx="4" fill="#1e1e24" stroke="${c}" stroke-width="2"/><path d="M6 10h10M6 15h10M6 20h6" stroke="${c}" stroke-width="2" stroke-linecap="round"/></g>`
+const moodWrap = (mood, inner) => `<g class="${mood === 'idle' ? 'breathe' : mood === 'happy' ? 'bounce' : ''}">${inner}</g>`
+
+const BLOB = 'M50 16 C74 16 89 33 88 55 C87 77 71 88 50 88 C29 88 13 77 12 55 C11 33 26 16 50 16Z'
+const BLOB_OPEN = 'M50 22 C78 18 93 36 91 58 C89 79 72 88 50 88 C28 88 11 79 9 58 C7 36 22 18 50 22Z'
+
+const concepts = [
+  {
+    name: 'Liquid Glass',
+    idea: 'Morphy is a drop of glossy black glass lit from inside; the mark is that drop caught mid-morph, a square melting into a circle.',
+    accent: '#7C5CFF',
+    font: "'Sora', var(--ui)",
+    weight: 600,
+    why: '<b>Why it wins:</b> premium, reads at 16 px, and the glow colour swaps with every theme and skin. Made for an Apple-tier app.',
+    mark(c) {
+      const g = id('g'), h = id('h')
+      return `<svg class="mark" viewBox="0 0 100 100"><defs>
+        <radialGradient id="${g}" cx="62%" cy="62%" r="60%"><stop offset="0" stop-color="${c}" stop-opacity=".95"/><stop offset=".55" stop-color="${c}" stop-opacity=".25"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+        <linearGradient id="${h}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient></defs>
+        <path d="M30 14 H50 A36 36 0 0 1 50 86 H30 A16 16 0 0 1 14 70 V30 A16 16 0 0 1 30 14Z" fill="#0b0b0e" stroke="rgba(255,255,255,.18)" stroke-width="1.5"/>
+        <path d="M30 14 H50 A36 36 0 0 1 50 86 H30 A16 16 0 0 1 14 70 V30 A16 16 0 0 1 30 14Z" fill="url(#${g})"/>
+        <path d="M30 19 H50 C62 19 72 24 78 32 C66 28 44 28 22 36 V30 A11 11 0 0 1 30 19Z" fill="url(#${h})"/></svg>`
+    },
+    morphy(c, mood) {
+      const g = id('g'), h = id('h'), d = mood === 'catch' ? BLOB_OPEN : BLOB
+      return `<svg viewBox="0 0 100 100"><defs>
+        <radialGradient id="${g}" cx="50%" cy="70%" r="55%"><stop offset="0" stop-color="${c}" stop-opacity="${mood === 'happy' ? 1 : 0.8}"/><stop offset=".7" stop-color="${c}" stop-opacity=".12"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+        <linearGradient id="${h}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".5"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient></defs>
+        ${mood === 'catch' ? fileCard(c) : ''}
+        ${moodWrap(mood, `<path d="${d}" fill="#0b0b0e" stroke="rgba(255,255,255,.16)" stroke-width="1.5"/><path d="${d}" fill="url(#${g})"/>
+        <ellipse cx="40" cy="28" rx="20" ry="8" fill="url(#${h})"/>${face(mood, 38, 62, 50, '#fff', 66)}`)}
+        ${mood === 'happy' ? sparkle(86, 18, c) + sparkle(14, 30, '#fff') : ''}</svg>`
+    },
+  },
+  {
+    name: 'Drip',
+    idea: 'Files go in solid and come out liquid: a squircle that drips into a droplet. Morphy is that droplet, loud lime and full of attitude.',
+    accent: '#C6FF3D',
+    font: "'Unbounded', var(--ui)",
+    weight: 700,
+    why: '<b>Strength:</b> an instantly memorable shape and colour, strong for stickers and merch. <b>Risk:</b> lime can feel less premium.',
+    mark(c) {
+      return `<svg class="mark" viewBox="0 0 100 100"><rect x="14" y="8" width="72" height="58" rx="22" fill="${c}"/>
+        <path d="M44 60 C44 70 40 74 40 82 A10 10 0 0 0 60 82 C60 74 56 70 56 60Z" fill="${c}"/>
+        <circle cx="38" cy="34" r="5" fill="#0b0b0e"/><circle cx="62" cy="34" r="5" fill="#0b0b0e"/></svg>`
+    },
+    morphy(c, mood) {
+      const drop = mood === 'catch' ? 'M50 14 C64 34 86 46 86 64 A36 26 0 0 1 14 64 C14 46 36 34 50 14Z' : 'M50 10 C60 30 80 44 80 62 A30 28 0 0 1 20 62 C20 44 40 30 50 10Z'
+      return `<svg viewBox="0 0 100 100">${mood === 'catch' ? fileCard(c) : ''}
+        ${moodWrap(mood, `<path d="${drop}" fill="${c}"/><ellipse cx="40" cy="44" rx="6" ry="9" fill="#fff" opacity=".35"/>${face(mood, 40, 60, 58, '#0b0b0e', 72)}`)}
+        ${mood === 'happy' ? `<circle cx="14" cy="88" r="4" fill="${c}"/><circle cx="86" cy="86" r="3" fill="${c}"/><circle cx="24" cy="94" r="2.5" fill="${c}"/>` : ''}</svg>`
+    },
+  },
+  {
+    name: 'Pixel Melt',
+    idea: 'Hard square pixels on one side melt into soft round dots on the other: digital becoming whatever you need. Morphy is built from the same grid.',
+    accent: '#FF6A3D',
+    font: "'Pixelify Sans', var(--ui)",
+    weight: 600,
+    why: '<b>Strength:</b> ownable and nostalgic, and the secret Retro theme comes built in. <b>Risk:</b> reads more like a game than a pro tool.',
+    mark(c) {
+      let s = ''
+      for (let r = 0; r < 5; r++) for (let k = 0; k < 5; k++) {
+        if ((r === 0 || r === 4) && k === 4) continue
+        const x = 12 + k * 16, y = 12 + r * 16, t = k / 4
+        s += t < 0.5 ? `<rect x="${x}" y="${y}" width="13" height="13" rx="${t * 6}" fill="${c}"/>` : `<circle cx="${x + 6.5}" cy="${y + 6.5}" r="${6.5 - (t - 0.5) * 3}" fill="${c}"/>`
+      }
+      return `<svg class="mark" viewBox="0 0 100 100">${s}</svg>`
+    },
+    morphy(c, mood) {
+      const rows = mood === 'catch'
+        ? ['..XXXXX..', '.XXXXXXX.', 'XXXXXXXXX', 'XX..X..XX', 'XX..X..XX', 'XXXXXXXXX', 'XXXX.XXXX', 'XXXXXXXXX', '.XXXXXXX.']
+        : mood === 'happy'
+          ? ['...XXX...', '.XXXXXXX.', 'XXXXXXXXX', 'X.X.X.X.X', 'XXXXXXXXX', 'XXXXXXXXX', 'XX.XXX.XX', 'XXX...XXX', '.XXXXXXX.']
+          : ['...XXX...', '.XXXXXXX.', 'XXXXXXXXX', 'XX.XXX.XX', 'XX.XXX.XX', 'XXXXXXXXX', 'XXXXXXXXX', 'XXXXXXXXX', '.XXXXXXX.']
+      let s = ''
+      rows.forEach((row, r) => [...row].forEach((ch, k) => { if (ch === 'X') s += `<rect x="${10 + k * 9}" y="${12 + r * 9}" width="8" height="8" rx="${k > 5 ? 4 : 1}" fill="${c}"/>` }))
+      return `<svg viewBox="0 0 100 100">${mood === 'catch' ? fileCard(c) : ''}${moodWrap(mood, s)}${mood === 'happy' ? `<rect x="86" y="8" width="6" height="6" fill="#fff"/><rect x="4" y="20" width="5" height="5" fill="${c}"/>` : ''}</svg>`
+    },
+  },
+  {
+    name: 'Ink Loop',
+    idea: 'One unbroken line that starts as a square and finishes as a circle: the whole idea of morph in a single stroke. Morphy is a doodle drawn with the same pen.',
+    accent: '#FFFFFF',
+    font: "'Syne', var(--ui)",
+    weight: 700,
+    why: '<b>Strength:</b> calm and designer-grade, works in any colour, and animates beautifully as a line drawing. <b>Risk:</b> quieter, less mascot energy.',
+    mark(c) {
+      return `<svg class="mark" viewBox="0 0 100 100"><path d="M22 80 V28 Q22 20 30 20 H52 A30 30 0 1 1 30 70" fill="none" stroke="${c}" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/></svg>`
+    },
+    morphy(c, mood) {
+      const d = mood === 'catch' ? BLOB_OPEN : BLOB
+      return `<svg viewBox="0 0 100 100">${mood === 'catch' ? fileCard(c) : ''}
+        ${moodWrap(mood, `<path d="${d}" fill="none" stroke="${c}" stroke-width="4.5" stroke-linejoin="round"/><path d="M50 16 C50 9 56 6 60 9" fill="none" stroke="${c}" stroke-width="4" stroke-linecap="round"/>${face(mood, 38, 62, 50, c, 66)}`)}
+        ${mood === 'happy' ? `<path d="M84 16 l6 -6 M88 26 h8 M14 18 l-6 -6" stroke="${c}" stroke-width="3" stroke-linecap="round"/>` : ''}</svg>`
+    },
+  },
+  {
+    name: 'Aurora Merge',
+    idea: 'A violet square and a cyan circle overlapping like light, their overlap glowing white. Morphy is the two shapes fused into one friendly creature.',
+    accent: '#3DE1FF',
+    accent2: '#7C5CFF',
+    font: "'Outfit', var(--ui)",
+    weight: 600,
+    why: '<b>Strength:</b> the most scroll-stopping colour in a TikTok feed. <b>Risk:</b> gradients date faster, so it works best as a Pro skin.',
+    mark(c, c2) {
+      return `<svg class="mark" viewBox="0 0 100 100"><g style="isolation:isolate">
+        <rect x="10" y="22" width="52" height="52" rx="14" fill="${c2}"/>
+        <circle cx="62" cy="48" r="28" fill="${c}" style="mix-blend-mode:screen"/></g></svg>`
+    },
+    morphy(c, mood, c2) {
+      const g = id('a'), d = mood === 'catch' ? BLOB_OPEN : BLOB
+      return `<svg viewBox="0 0 100 100"><defs><linearGradient id="${g}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${c2}"/><stop offset="1" stop-color="${c}"/></linearGradient></defs>
+        ${mood === 'catch' ? fileCard(c) : ''}
+        ${moodWrap(mood, `<path d="${d}" fill="url(#${g})"/><ellipse cx="38" cy="30" rx="16" ry="6" fill="#fff" opacity=".35"/>${face(mood, 38, 62, 50, '#fff', 66)}`)}
+        ${mood === 'happy' ? sparkle(86, 18, c) + sparkle(14, 26, c2) : ''}</svg>`
+    },
+  },
+]
+
+const sheets = document.getElementById('sheets')
+concepts.forEach((k, i) => {
+  const m = (size) => k.mark(k.accent, k.accent2).replace('class="mark"', `width="${size}" height="${size}"`)
+  const el = document.createElement('section')
+  el.className = 'sheet'
+  el.innerHTML = `
+    <div class="top">
+      <div><div class="num">Concept ${i + 1}</div><h2 class="name">${k.name}</h2><p class="idea">${k.idea}</p></div>
+      <span class="swatch"><i style="background:${k.accent}"></i>${k.accent}${k.accent2 ? ` <i style="background:${k.accent2}"></i>${k.accent2}` : ''}</span>
+    </div>
+    <div class="board">
+      <div class="panel">
+        <div class="label">Logo</div>
+        <div class="lockup">${k.mark(k.accent, k.accent2)}<span class="word" style="font-family:${k.font};font-weight:${k.weight}">morph</span></div>
+        <div class="sizes">
+          <span class="chip"><span class="icon">${m(44)}</span>App icon</span>
+          <span class="chip">${m(32)} 32 px</span>
+          <span class="chip">${m(16)} 16 px</span>
+          <span class="chip"><span class="light">${m(16)}</span> on light</span>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="label">Morphy</div>
+        <div class="moods">
+          ${['idle', 'catch', 'happy'].map((mood) => `<div class="mood">${k.morphy(k.accent, mood, k.accent2)}<span>${{ idle: 'Idle', catch: 'Catching a file', happy: 'Done!' }[mood]}</span></div>`).join('')}
+        </div>
+      </div>
+    </div>
+    <p class="why">${k.why}</p>`
+  sheets.appendChild(el)
+})
+</script>

@@ -1,0 +1,37 @@
+<!doctype html>
+<!-- Dev-only page (not in the production build): finds how big a file each job can handle on this device. -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>morph size test</title>
+    <style>
+      body { background: #000; color: #fff; font: 15px/1.5 -apple-system, system-ui, sans-serif; margin: 0; padding: 20px 16px 60px; }
+      h1 { font-size: 22px; margin: 0 0 4px; }
+      p { color: #a1a1a1; margin: 0 0 16px; }
+      label, button { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 20px; border-radius: 16px; font: 600 16px system-ui; border: 0; cursor: pointer; }
+      label { background: #7c5cff; color: #fff; }
+      button { background: #1e1e1e; color: #fff; margin-left: 8px; }
+      table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 13px; font-variant-numeric: tabular-nums; }
+      th, td { text-align: left; padding: 8px 6px; border-bottom: 1px solid rgba(255,255,255,.08); vertical-align: top; }
+      th { color: #a1a1a1; font-weight: 500; }
+      .ok { color: #5ee08a; } .bad { color: #ff6b6b; } .run { color: #3de1ff; }
+      #status { margin-top: 16px; color: #3de1ff; min-height: 22px; }
+      #dev { font-size: 12px; color: #a1a1a1; margin-top: 12px; overflow-wrap: anywhere; }
+    </style>
+  </head>
+  <body>
+    <h1>morph size test</h1>
+    <p>Pick one or more test videos. Each one runs 4 jobs. If the page reloads by itself, that job crashed: the table marks it, then pick the next file.</p>
+    <label>Pick files<input id="pick" type="file" accept="video/*" multiple hidden /></label>
+    <button id="copy" type="button">Copy results</button>
+    <button id="clear" type="button">Clear</button>
+    <div id="status" role="status"></div>
+    <table>
+      <thead><tr><th>File</th><th>Job</th><th>Result</th><th>Time</th><th>Speed</th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+    <div id="dev"></div>
+    <script type="module" src="/src/dev/sizetest.ts"></script>
+  </body>
+</html>
