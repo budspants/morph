@@ -9,6 +9,7 @@
     "lint": "oxlint",
     "preview": "vite preview",
     "test:e2e": "playwright test",
+    "test:unlock": "node scripts/check-unlock.ts",
     "dev:phone": "PHONE=true vite --host"
   },
   "dependencies": {

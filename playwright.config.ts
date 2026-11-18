@@ -30,7 +30,6 @@ export default defineConfig({
         VITE_ADSENSE_CLIENT: 'ca-pub-0000000000000000',
         VITE_ADSENSE_SLOT: '1234567890',
         VITE_PRO_CHECKOUT_URL: 'https://example.test/checkout',
-        VITE_PRO_PRODUCT_ID: '4242',
       },
       url: `http://localhost:${MONEY_PORT}`,
       reuseExistingServer: false,
